@@ -20,4 +20,9 @@ public class AttributesService {
         List<Attributes> attributes = AttributesLoader.getAttributesFromFile(file);
         repository.saveAll(attributes);
     }
+
+    public Attributes findByCode(String code){
+        return repository.findByCode(code);
+    }
+
 }

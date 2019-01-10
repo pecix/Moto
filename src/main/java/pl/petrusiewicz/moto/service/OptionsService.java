@@ -20,4 +20,12 @@ public class OptionsService {
         List<Options> options = OptionsLoader.getOptionsFromFile(file);
         repository.saveAll(options);
     }
+
+    public Options findByAttributeAndCode(String attribute, String code){
+        return repository.findByAttributeAndCode(attribute, code);
+    }
+
+    public Options findById(int id){
+        return repository.findById(id).get();
+    }
 }

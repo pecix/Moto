@@ -6,4 +6,6 @@ import pl.petrusiewicz.moto.model.Attributes;
 
 @Repository
 public interface AttributesRepository extends CrudRepository<Attributes, Integer> {
+
+    Attributes findByCode(String code);
 }

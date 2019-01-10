@@ -6,4 +6,7 @@ import pl.petrusiewicz.moto.model.Options;
 
 @Repository
 public interface OptionsRepository extends CrudRepository<Options, Integer> {
+
+    Options findByAttributeAndCode(String attribute, String code);
+
 }
